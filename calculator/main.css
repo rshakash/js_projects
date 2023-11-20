@@ -3,3 +3,94 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+body {
+    background-color: black;
+    font-family: monospace;
+}
+
+/* Calculator Layout */
+main {
+    display: grid;
+    grid-template-areas: "display display display display"
+                         "clear clear clear divide"
+                         "num7 num8 num9 multiply"
+                         "num4 num5 num6 minus"
+                         "num1 num2 num3 plus"
+                         "num0 num0 dot equal";
+    gap: 2px;
+}
+.num1 {
+    grid-area: num1;
+}
+.num2 {
+    grid-area: num2;
+}
+.num3 {
+    grid-area: num3;
+}
+.num4 {
+    grid-area: num4;
+}
+.num5 {
+    grid-area: num5;
+}
+.num6 {
+    grid-area: num6;
+}
+.num7 {
+    grid-area: num7;
+}
+.num8 {
+    grid-area: num8;
+}
+.num9 {
+    grid-area: num9;
+}
+.num0 {
+    grid-area: num0;
+}
+.plus {
+    grid-area: plus;
+}
+.minus {
+    grid-area: minus;
+}
+.multiply {
+    grid-area: multiply;
+}
+.divide {
+    grid-area: divide;
+}
+.equal {
+    grid-area: equal;
+}
+.clear {
+    grid-area: clear;
+}
+.dot {
+    grid-area: dot;
+}
+
+
+.display {
+    grid-area: display;
+    height: 30vh;
+    font-size: 3rem;
+    color: white;
+    padding: 1rem;
+    text-align: right;
+}
+button{
+    height: calc((70vh - 8px)/5);
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+@media screen and (min-width: 450px){
+    main {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
